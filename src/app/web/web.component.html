@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="tituloSeccion">
+    <h1>Web</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-4" *ngFor="let web of web | async">
+    <!--Card-->
+    <div class="card">
+
+      <!--Card image-->
+      <a [href]="web.url" target="_blank">
+        <img class="img-fluid" [src]="web.img" alt="Card image cap">
+      </a>
+
+      <!--Card content-->
+      <div class="card-body">
+        <!--Title-->
+        <h4 class="card-title">{{ web.titulo }}</h4>
+        <!--Text-->
+        <p class="card-text">{{ web.descripcion }}</p>
+      </div>
+
+    </div>
+    <!--/.Card-->
+  </div>
+
+</div>
+
+<div class="container">
+  <div class="tituloSeccion">
+    <h2>Crear Web</h2>
+  </div>
+</div>
+
+<app-crear-web></app-crear-web>

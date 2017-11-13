@@ -1,0 +1,10 @@
+@import "~font-awesome/css/font-awesome.min.css";
+
+.tituloSeccion{
+    font-family: Courier New, Courier, monospace;
+    margin-top: 5%;
+}
+
+.card{
+    font-family: Courier New, Courier, monospace;
+}

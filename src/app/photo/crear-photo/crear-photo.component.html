@@ -1,0 +1,52 @@
+<!--Contact Form-->
+<div class="row">
+  <div class="col-6">
+    <form (ngSubmit)="guardar()" #forma="ngForm">
+
+      <p class="h5 text-center mt-3 mb-4">Crear contenido</p>
+
+      <!-- <div class="md-form">
+        <label for="categoria">Categoria:</label>
+        <br>
+        <br>
+        <select [(ngModel)]="contenido.categoria" class="form-control">
+          <option value="Video">Video</option>
+          <option value="Web">Web</option>
+          <option value="Photo">Photo</option>
+        </select>
+      </div> -->
+
+      <div class="md-form">
+        <i class="fa fa-pencil-square-o prefix grey-text"></i>
+        <input [(ngModel)]="contenido.titulo" type="text" name="titulo" class="form-control" required>
+        <label for="titulo">Titulo</label>
+      </div>
+
+      <div class="md-form">
+        <i class="fa fa-file prefix grey-text"></i>
+        <input [(ngModel)]="contenido.img" type="text" name="img" class="form-control">
+        <label for="img">Img</label>
+      </div>
+
+      <div class="md-form">
+        <i class="fa fa-link prefix grey-text"></i>
+        <input [(ngModel)]="contenido.url" type="text" name="url" class="form-control">
+        <label for="url">Url</label>
+      </div>
+
+      <div class="md-form">
+        <i class="fa fa-commenting-o prefix grey-text"></i>
+        <textarea [(ngModel)]="contenido.descripcion" type="text" name="descripcion" class="form-control md-textarea" style="height: 100px"></textarea>
+        <label for="descripcion">Descripcion</label>
+      </div>
+
+      <div class="form-group text-center">
+        <button class="btn btn-unique waves-light" type="submit" mdbRippleRadius>Send
+          <i class="fa fa-paper-plane-o ml-1"></i>
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>
+<!--Contact Form-->

@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="tituloSeccion">
+    <h1>Photo</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-4" *ngFor="let photo of photo | async">
+    <!--Card-->
+    <div class="card">
+
+      <!--Card image-->
+      <a [href]="photo.url" target="_blank">
+        <img class="img-fluid" [src]="photo.img" alt="Card image cap">
+      </a>
+
+      <!--Card content-->
+      <div class="card-body">
+        <!--Title-->
+        <h4 class="card-title">{{ photo.titulo }}</h4>
+        <!--Text-->
+        <p class="card-text">{{ photo.descripcion }}</p>
+      </div>
+
+    </div>
+    <!--/.Card-->
+  </div>
+
+</div>
+
+<div class="container">
+  <div class="tituloSeccion">
+    <h2>Crear Photo</h2>
+  </div>
+</div>
+
+<app-crear-photo></app-crear-photo>
